@@ -1,0 +1,56 @@
+const alunos = [
+    {
+        nome: 'Bruno',
+        nota: 5,
+        turma: '1B',
+    
+    },
+    {
+        nome: 'Adriana',
+        nota: 10,
+        turma: '1B',
+    },
+    {
+        nome: 'Zuliane',
+        nota: 7,
+        turma: '3C'
+    },
+    {
+        nome: 'Layssa',
+        nota: 10,
+        turma: '3A'
+    },
+    {
+        nome: 'Ingrid',
+        nota: 10,
+        turma: '3A',
+    },
+    {
+        nome: 'Rodrigo',
+        nota: 8,
+        turma: '2B',
+    },
+    {
+        nome: 'Gabriel',
+        nota: 4,
+        turma: '1B',
+    }
+]
+
+
+
+function alunosAprovados(alunos, media) {
+	let aprovados = [];
+
+	for (let i = 0; i < alunos.length; i++) {
+		let { nota, nome } = alunos[i];
+
+		if (nota >= media) {
+			aprovados.push(nome);
+		}
+	}
+
+	return aprovados;
+}
+
+console.log(alunosAprovados(alunos, 5));
